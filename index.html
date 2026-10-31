@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Ceiling Aesthetics | Next-Gen Stretch Ceiling Design</title>
+    <meta name="description" content="Discover premium stretch ceiling solutions for modern residential and commercial spaces. Custom lighting, acoustic control, and seamless luxury.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0f1d',
+                            navy: '#111827',
+                            card: 'rgba(17, 24, 39, 0.7)',
+                            accent: '#10b981',
+                            accentGlow: '#059669',
+                            lightGreen: '#34d399',
+                            cyan: '#38bdf8'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.4' },
+                            '50%': { opacity: '0.8' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Glassmorphism Styles */
+        .glass-card {
+            background: rgba(17, 24, 39, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card-hover {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-5px) scale(1.01);
+            border-color: rgba(16, 185, 129, 0.4);
+            box-shadow: 0 16px 40px -10px rgba(16, 185, 129, 0.25);
+        }
+
+        .glass-nav {
+            background: rgba(10, 15, 29, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Hide scrollbar for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom Accordion Transition */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+        }
+        .faq-answer.open {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-[#0a0f1d] text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white">
+
+    <!-- Ambient Glowing Background Orbs (Apple-like Depth) -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl animate-pulse-glow"></div>
+        <div class="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl animate-pulse-glow" style="animation-delay: 2s;"></div>
+        <div class="absolute -bottom-40 left-1/3 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-3xl animate-pulse-glow" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
+                        <i data-lucide="layers" class="w-6 h-6 text-slate-950"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight text-white block leading-tight">Urban Ceiling</span>
+                        <span class="text-xs text-emerald-400 font-medium tracking-widest uppercase block">Aesthetics</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-1 bg-white/5 p-1.5 rounded-full border border-white/10">
+                    <a href="#home" class="nav-link px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:text-emerald-400 text-slate-300">Home</a>
+                    <a href="#about" class="nav-link px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:text-emerald-400 text-slate-300">About Us</a>
+                    <a href="#blog" class="nav-link px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:text-emerald-400 text-slate-300">Articles</a>
+                    <a href="#contact" class="nav-link px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-emerald-500 text-slate-950 font-semibold hover:bg-emerald-400 shadow-md shadow-emerald-500/20">Get Consultation</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-white/10 px-4 pt-3 pb-6 space-y-2">
+            <a href="#home" class="mobile-nav-link block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-white/5 hover:text-emerald-400">Home</a>
+            <a href="#about" class="mobile-nav-link block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-white/5 hover:text-emerald-400">About Us</a>
+            <a href="#blog" class="mobile-nav-link block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-white/5 hover:text-emerald-400">Articles</a>
+            <a href="#contact" class="mobile-nav-link block px-4 py-3 rounded-lg text-base font-medium text-emerald-950 bg-emerald-400 text-center font-semibold">Get Consultation</a>
+        </div>
+    </header>
+
+    <!-- Main Dynamic Content Wrapper -->
+    <main class="flex-grow z-10">
+
+        <!-- ================= PAGE 1: HOME ================= -->
+        <section id="page-home" class="page-section hidden">
+            <!-- Hero Banner -->
+            <div class="relative pt-12 pb-20 md:pt-20 md:pb-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-8">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase animate-float">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                            Next-Generation Interior Ceiling Architecture
+                        </div>
+                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-none">
+                            Transform Overhead Spaces Into <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent glow-text">Luminous Canvas</span>
+                        </h1>
+                        <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+                            Experience flawless, seamless stretch ceilings engineered for luxury residences and modern commercial interior design. High acoustic comfort, integrated LED illumination, and dynamic shapes.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <a href="#contact" class="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-bold hover:from-emerald-400 hover:to-teal-400 transition-all duration-300 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transform hover:-translate-y-0.5 flex items-center gap-2">
+                                Request Custom Quote <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#article" class="px-8 py-4 rounded-xl glass-card text-white font-semibold hover:bg-white/10 transition-all duration-300 border border-white/10 flex items-center gap-2">
+                                Read Ceiling Guide <i data-lucide="book-open" class="w-5 h-5 text-emerald-400"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Glass Visualizer Showcase -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="glass-card rounded-3xl p-6 relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Modern stretch ceiling with backlit LED lights" class="w-full h-[400px] object-cover rounded-2xl shadow-2xl transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/111827/34d399?text=Modern+Stretch+Ceiling'">
+                            <div class="absolute bottom-10 left-10 right-10 glass-card p-4 rounded-xl border border-white/20">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs text-slate-400 font-medium">Design Feature</p>
+                                        <p class="text-sm font-bold text-white">Translucent Backlit Membrane</p>
+                                    </div>
+                                    <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-400 text-xs font-semibold">100% Waterproof</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlights Grid Section -->
+            <div class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Why Architects & Homeowners Choose Stretch Systems</h2>
+                    <p class="text-slate-400 mt-3">Replacing legacy drywalls and pop false ceilings with modern PVC membrane architecture.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="glass-card glass-card-hover p-8 rounded-2xl relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                            <i data-lucide="zap" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Rapid Clean Installation</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Installed in hours without dust, debris, or heavy paint odors. No need to move heavy furniture during setup.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="glass-card glass-card-hover p-8 rounded-2xl relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                            <i data-lucide="sun" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Custom Diffused Lighting</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Integrates seamlessly with color-changing RGBW LEDs, magnetic track lights, fiber optic starfields, and ambient soft halos.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="glass-card glass-card-hover p-8 rounded-2xl relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Zero Water Damage & Mold</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Impervious to moisture, dampness, and leaks. Retains up to 100 liters of water per square meter without cracking.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 2: ABOUT ================= -->
+        <section id="page-about" class="page-section hidden">
+            <div class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Header -->
+                <div class="max-w-3xl mb-16">
+                    <span class="text-emerald-400 font-semibold tracking-wider text-xs uppercase block mb-2">Our Craftsmanship & Engineering</span>
+                    <h1 class="text-4xl font-extrabold text-white tracking-tight sm:text-5xl">Revolutionizing Architectural Surfaces</h1>
+                    <p class="text-slate-300 text-lg mt-4 leading-relaxed">
+                        At Urban Ceiling Aesthetics, we bridge the gap between structural utility and contemporary design elegance. Stretch ceiling technology represents the pinnacle of surface engineering.
+                    </p>
+                </div>
+
+                <!-- Story & Tech Cards -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-400">
+                            <h3 class="text-lg font-bold text-white mb-2">High-Tech Polymer Formulations</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Our membranes use elasticized polyvinyl chloride (PVC) and acoustic-treated polyester fabrics. They are lightweight, fire-retardant (Class B-s1, d0), anti-static, and eco-friendly.
+                            </p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-cyan-400">
+                            <h3 class="text-lg font-bold text-white mb-2">Precision Harpoon Fixing Profile</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                A perimeter aluminium profile anchors the custom-cut membrane. Under thermal stretching, the membrane tightens to produce a glass-smooth ceiling plane without sag.
+                            </p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-teal-400">
+                            <h3 class="text-lg font-bold text-white mb-2">Acoustic Dampening Technology</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Micro-perforated membranes trap soundwaves between the stretched surface and the primary ceiling slab, dramatically reducing room echo in open floorplans.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-3xl relative">
+                        <h3 class="text-2xl font-bold text-white mb-6">Interactive Lighting Profile Selector</h3>
+                        <p class="text-slate-300 text-sm mb-6">Click below to preview common ceiling optical finishes:</p>
+
+                        <!-- Interactive Finish Switcher Demo -->
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-3 gap-3">
+                                <button onclick="setFinish('matte')" class="finish-btn p-3 rounded-xl glass-card text-xs font-semibold text-center hover:border-emerald-400 transition-colors active border-emerald-400 text-emerald-400" id="btn-matte">Matte Smooth</button>
+                                <button onclick="setFinish('gloss')" class="finish-btn p-3 rounded-xl glass-card text-xs font-semibold text-center hover:border-emerald-400 transition-colors text-slate-300" id="btn-gloss">High Gloss</button>
+                                <button onclick="setFinish('translucent')" class="finish-btn p-3 rounded-xl glass-card text-xs font-semibold text-center hover:border-emerald-400 transition-colors text-slate-300" id="btn-translucent">LED Backlit</button>
+                            </div>
+
+                            <div id="finish-preview" class="w-full h-56 rounded-2xl transition-all duration-500 relative flex items-center justify-center overflow-hidden border border-white/10 bg-gradient-to-b from-slate-800 to-slate-900">
+                                <div id="preview-text" class="text-slate-300 text-sm font-medium z-10 px-4 text-center">
+                                    Matte Finish: Resembles smooth, painted drywall with zero imperfections.
+                                </div>
+                                <div id="glow-effect" class="absolute inset-0 bg-emerald-500/0 transition-all duration-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 3: BLOG LIST ================= -->
+        <section id="page-blog" class="page-section hidden">
+            <div class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <span class="text-emerald-400 font-semibold tracking-wider text-xs uppercase block mb-2">Design Insights & Guides</span>
+                        <h1 class="text-4xl font-extrabold text-white tracking-tight">Ceiling Architecture Articles</h1>
+                    </div>
+                    <p class="text-slate-400 text-sm mt-2 md:mt-0 max-w-md">Stay updated with modern ceiling technologies, illumination trends, and urban interior transformations.</p>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article Card 1 (Featured Targeted Keyword Article) -->
+                    <article class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col border border-emerald-500/30">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Living room stretch ceiling installation" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://placehold.co/800x500/111827/34d399?text=Stretch+Ceilings'">
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-emerald-500 text-slate-950 font-bold text-xs rounded-full uppercase tracking-wider">Featured Guide</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+                                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-400"></i> 10 min read</span>
+                                <span>•</span>
+                                <span>Interior Architecture</span>
+                            </div>
+                            <h2 class="text-xl font-bold text-white mb-3 hover:text-emerald-400 transition-colors">
+                                <a href="#article">Why Stretch Ceiling Services Are Transforming Modern Urban Interiors</a>
+                            </h2>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                An exhaustive analysis of how high-gloss, acoustic, and backlit translucent stretch ceiling systems overcome traditional interior challenges in rapidly growing cities.
+                            </p>
+                            <a href="#article" class="inline-flex items-center justify-between text-emerald-400 font-semibold text-sm hover:text-emerald-300 pt-4 border-t border-white/5">
+                                Read Complete 1,200+ Word Guide <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 2 -->
+                    <article class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="LED lighting design in ceiling" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://placehold.co/800x500/111827/38bdf8?text=LED+Lighting'">
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-white/10 backdrop-blur-md text-slate-200 font-semibold text-xs rounded-full">Illumination</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+                                <span><i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-400 inline mr-1"></i> 5 min read</span>
+                                <span>•</span>
+                                <span>Lighting Trends</span>
+                            </div>
+                            <h2 class="text-xl font-bold text-white mb-3">
+                                Acoustic & Lighting Integration in Open Commercial Layouts
+                            </h2>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                How translucent ceiling membranes double as acoustic sound absorbers while diffusing soft flicker-free light across office floors.
+                            </p>
+                            <span class="text-slate-500 text-sm pt-4 border-t border-white/5">Published • Tech Architecture</span>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 3 -->
+                    <article class="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Luxury apartment interior" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://placehold.co/800x500/111827/34d399?text=Modern+Interiors'">
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-white/10 backdrop-blur-md text-slate-200 font-semibold text-xs rounded-full">Materials</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+                                <span><i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-400 inline mr-1"></i> 7 min read</span>
+                                <span>•</span>
+                                <span>Maintenance</span>
+                            </div>
+                            <h2 class="text-xl font-bold text-white mb-3">
+                                Stretch Membrane vs Traditional Gypsum POP Ceilings
+                            </h2>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                A side-by-side durability, moisture resistance, maintenance cost, and weight comparison between old plaster ceiling methods and PVC stretch systems.
+                            </p>
+                            <span class="text-slate-500 text-sm pt-4 border-t border-white/5">Published • Design Comparison</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 4: DETAILED 1200+ WORD ARTICLE ================= -->
+        <section id="page-article" class="page-section hidden">
+            <div class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Article Breadcrumb -->
+                <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6">
+                    <a href="#home" class="hover:text-emerald-400">Home</a>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                    <a href="#blog" class="hover:text-emerald-400">Articles</a>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                    <span class="text-emerald-400 truncate">Why Stretch Ceilings Are Useful</span>
+                </nav>
+
+                <!-- H1 Header -->
+                <header class="mb-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+                        Comprehensive Interior Guide
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                        Why Stretch Ceiling Systems Are Revolutionizing Contemporary Urban Spaces
+                    </h1>
+                    <div class="flex items-center gap-4 text-xs text-slate-400 border-b border-white/10 pb-6">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">
+                                UA
+                            </div>
+                            <span class="text-slate-200 font-medium">Urban Architecture Desk</span>
+                        </div>
+                        <span>•</span>
+                        <span>1,200+ Words Deep Dive</span>
+                        <span>•</span>
+                        <span>Updated 2026</span>
+                    </div>
+                </header>
+
+                <!-- Featured Image -->
+                <div class="mb-12 rounded-3xl overflow-hidden glass-card border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Architectural backlit ceiling setup" class="w-full h-[400px] object-cover" onerror="this.src='https://placehold.co/1200x600/111827/34d399?text=Modern+Architectural+Ceilings'">
+                    <div class="p-4 bg-slate-900/80 text-xs text-slate-400 italic text-center">
+                        Illustration 1.0: Seamless translucent stretch ceiling illuminated with energy-efficient LED array.
+                    </div>
+                </div>
+
+                <!-- ARTICLE BODY (Rich 1,200+ Words in English) -->
+                <article class="prose prose-invert max-w-none space-y-8 text-slate-300 text-base leading-relaxed">
+                    
+                    <!-- Introduction Paragraphs -->
+                    <p class="text-lg text-slate-200 leading-relaxed font-normal">
+                        Modern architectural design has undergone a fundamental shift over the past decade. While wall finishes, luxury flooring, and modular furnishings have traditionally dominated interior renovation budgets, overhead spaces were long restricted to standard whitewashed drywall or heavy Plaster of Paris (POP) false ceilings. Today, progressive interior designers and structural architects are turning toward advanced membrane technologies—most notably high-grade elastomeric stretch ceilings—to overcome traditional structural limitations, optimize indoor lighting quality, and deliver high-impact visual aesthetics.
+                    </p>
+
+                    <p>
+                        In rapidly evolving urban landscapes, where structural durability, climate resilience, and dust-free execution are critical priorities, adopting advanced interior ceiling solutions has become paramount. Whether upgrading a high-rise luxury apartment, creating an acoustic sanctuary in a home theater, or designing a high-traffic corporate lounge, finding a certified provider for modern overhead installations like a <a href="https://www.xxtraceil.com/stretch-ceiling-bangalore/" class="text-emerald-400 font-bold underline hover:text-emerald-300 transition-colors">stretch ceiling in bangalore</a> allows property owners to achieve flawless smooth finishes without the structural weight, cracking risks, or lengthy downtime associated with conventional drywall.
+                    </p>
+
+                    <!-- H2 Section 1 -->
+                    <h2 class="text-2xl font-bold text-white border-l-4 border-emerald-400 pl-4 py-1 mt-10">
+                        1. Understanding Stretch Ceiling Technology: How It Works
+                    </h2>
+                    
+                    <p>
+                        A stretch ceiling is a lightweight suspended surface system consisting of two primary components: a specialized perimeter track (aluminum or heavy-duty PVC extrusion) and a custom-manufactured elastic membrane. Fabricated from premium polyvinyl chloride (PVC) polymers or polyurethane-coated polyester textiles, the membrane is cut precisely to match the dimensions of the room with a 6% to 7% shrinkage allowance.
+                    </p>
+
+                    <p>
+                        During installation, specialized heat units warm the space to approximately 40°C–50°C, softening the membrane enough to allow factory-welded harpoon edges to lock tightly into the hidden wall perimeter tracks. As the room cools down to ambient temperature, the membrane contracts dynamically, pulling itself taut with tension up to 50 kg per linear meter. The result is a mathematically flat, perfectly smooth overhead surface that will never sag, peel, flake, or develop stress fractures over time.
+                    </p>
+
+                    <!-- SVG Feature Diagram -->
+                    <div class="my-8 p-6 glass-card rounded-2xl border border-emerald-500/20">
+                        <h4 class="text-sm font-bold text-emerald-400 uppercase tracking-wider mb-4">Structural Cross-Section Diagram</h4>
+                        <div class="w-full flex justify-center py-4">
+                            <svg class="w-full max-w-lg h-auto text-slate-300" viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="20" y="20" width="560" height="30" rx="4" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+                                <text x="300" y="40" fill="#94a3b8" font-size="12" text-anchor="middle">Primary Concrete Ceiling Slab</text>
+                                
+                                <rect x="60" y="80" width="480" height="15" fill="#047857"/>
+                                <text x="300" y="92" fill="#a7f3d0" font-size="10" text-anchor="middle">Dimmable LED Strip Backlight Grid</text>
+                                
+                                <path d="M 40 160 H 560" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+                                <text x="300" y="150" fill="#34d399" font-size="12" text-anchor="middle" font-weight="bold">High-Tension PVC Stretch Membrane</text>
+                                
+                                <rect x="20" y="145" width="20" height="30" fill="#334155" stroke="#10b981"/>
+                                <rect x="560" y="145" width="20" height="30" fill="#334155" stroke="#10b981"/>
+                                <text x="30" y="195" fill="#64748b" font-size="10" text-anchor="middle">Wall Anchor Track</text>
+                                <text x="570" y="195" fill="#64748b" font-size="10" text-anchor="middle">Wall Anchor Track</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- H2 Section 2 -->
+                    <h2 class="text-2xl font-bold text-white border-l-4 border-emerald-400 pl-4 py-1 mt-10">
+                        2. Key Benefits of Implementing Stretch Ceiling Systems
+                    </h2>
+
+                    <!-- H3 Subsections -->
+                    <h3 class="text-xl font-semibold text-emerald-400 mt-6">A. Superior Moisture & Flood Protection</h3>
+                    <p>
+                        In humid tropical environments or multi-story apartment complexes, plumbing leaks from upper floors pose a constant threat to interior investments. Traditional gypsum false ceilings absorb water, swell, yellow, and eventually collapse. Stretch ceilings, by contrast, are 100% waterproof and moisture-impermeable.
+                    </p>
+                    <p>
+                        In the event of an overhead pipe burst or upper-floor bathroom leakage, the stretch membrane acts as an elastic containment safety net. It can safely hold up to 100 liters of water per square meter by bulging safely downward without tearing. Maintenance specialists can easily unhook a small section of the perimeter, drain the trapped water, dry the cavity, and re-stretch the original membrane back to its pristine condition without needing replacement.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-emerald-400 mt-6">B. Dust-Free, Rapid Installation Process</h3>
+                    <p>
+                        Constructing standard POP or drywall false ceilings requires extensive sanding, plaster mixing, taping joints, and applying multiple coats of paint. This process typically fills the entire house with fine gypsum dust for weeks and requires clearing out all furniture. Stretch ceiling installations require no plaster, sanding, or messy wet painting. A complete living room ceiling can be fully mounted in as little as 4 to 6 hours with zero mess.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-emerald-400 mt-6">C. Endless Aesthetic Customization & Lighting Effects</h3>
+                    <p>
+                        Stretch ceiling membranes offer unprecedented creative freedom for architects and interior designers:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-300">
+                        <li><strong class="text-white">Translucent Backlit Lightboxes:</strong> Membranes with 50%–70% light transmission transform entire ceiling planes into soft, shadow-free, luminous skylights.</li>
+                        <li><strong class="text-white">High-Gloss Mirror Finishes:</strong> Reflective gloss ceilings visually double the perceived height of rooms with lower slab clearances.</li>
+                        <li><strong class="text-white">Acoustic Absorption:</strong> Micro-perforated acoustic membranes reduce reverberation time, making them ideal for home theaters, boardrooms, and noisy living areas.</li>
+                        <li><strong class="text-white">Printed Art & Fiber Optics:</strong> High-resolution UV printing allows custom sky graphics, abstract art, or starry night fiber optics to be embedded directly into the ceiling surface.</li>
+                    </ul>
+
+                    <!-- H2 Section 3 -->
+                    <h2 class="text-2xl font-bold text-white border-l-4 border-emerald-400 pl-4 py-1 mt-10">
+                        3. Step-by-Step Installation Workflow
+                    </h2>
+                    <p>
+                        Achieving a flawless ceiling requires meticulous site preparation and precision engineering. The professional installation sequence follows four distinct phases:
+                    </p>
+
+                    <div class="space-y-4 my-6">
+                        <div class="glass-card p-5 rounded-xl border border-white/10 flex gap-4 items-start">
+                            <span class="w-8 h-8 rounded-full bg-emerald-500 text-slate-950 font-bold flex items-center justify-center shrink-0">1</span>
+                            <div>
+                                <h4 class="text-white font-bold text-base">Laser Leveling & Track Mounting</h4>
+                                <p class="text-slate-400 text-sm mt-1">Specialists use 360-degree laser levels to establish a precise horizontal datum line along the room walls. Aluminum perimeter tracks are securely fastened using specialized anchors.</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-5 rounded-xl border border-white/10 flex gap-4 items-start">
+                            <span class="w-8 h-8 rounded-full bg-emerald-500 text-slate-950 font-bold flex items-center justify-center shrink-0">2</span>
+                            <div>
+                                <h4 class="text-white font-bold text-base">Electrical & Fixture Sub-Structure Setup</h4>
+                                <p class="text-slate-400 text-sm mt-1">All electrical wiring, LED transformers, chandelier mounting platforms, and HVAC diffusers are rigidly anchored to the primary concrete slab above the intended ceiling height.</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-5 rounded-xl border border-white/10 flex gap-4 items-start">
+                            <span class="w-8 h-8 rounded-full bg-emerald-500 text-slate-950 font-bold flex items-center justify-center shrink-0">3</span>
+                            <div>
+                                <h4 class="text-white font-bold text-base">Thermal Expansion & Harpoon Insertion</h4>
+                                <p class="text-slate-400 text-sm mt-1">Safe thermic warmers raise room temperature briefly. Technicians insert the flexible edge harpoons of the membrane into the perimeter tracks using specialized curved spatulas.</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-5 rounded-xl border border-white/10 flex gap-4 items-start">
+                            <span class="w-8 h-8 rounded-full bg-emerald-500 text-slate-950 font-bold flex items-center justify-center shrink-0">4</span>
+                            <div>
+                                <h4 class="text-white font-bold text-base">Cooling Tension & Ring Reinforcement</h4>
+                                <p class="text-slate-400 text-sm mt-1">As the air cools, the membrane tightens smoothly. Heat-resistant reinforcement rings are bonded to cutouts for downlights and sprinklers before final testing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- H2 Section 4 -->
+                    <h2 class="text-2xl font-bold text-white border-l-4 border-emerald-400 pl-4 py-1 mt-10">
+                        4. Maintenance, Longevity, and Environmental Impact
+                    </h2>
+                    <p>
+                        Unlike traditional plaster surfaces that demand repainting every 3 to 5 years due to micro-cracking, dust accumulation, or yellowing, high-density PVC stretch ceilings are engineered for a service lifespan exceeding 20+ years. They require virtually zero ongoing maintenance. 
+                    </p>
+                    <p>
+                        Because the surface is naturally anti-static, it repels airborne dust particles. Should cleaning ever be necessary—such as removing a smudge in a kitchen environment—a simple wipe down with a microfiber cloth and light soapy water restores the surface to its factory sheen instantly. Furthermore, the PVC and textile materials used in modern stretch ceilings are 100% recyclable, non-toxic, and free from volatile organic compounds (VOCs), making them a safe choice for children's bedrooms, healthcare facilities, and eco-certified green buildings.
+                    </p>
+
+                    <!-- Conclusion Section -->
+                    <div class="mt-12 p-8 glass-card rounded-3xl border border-emerald-500/30 bg-gradient-to-b from-slate-900 to-slate-950">
+                        <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-emerald-400"></i>
+                            Conclusion
+                        </h2>
+                        <p class="text-slate-300 leading-relaxed text-base">
+                            Stretch ceilings represent a monumental evolutionary leap in interior surface technology. By seamlessly combining rapid dust-free installation, absolute moisture defense, integrated lighting, and unmatched architectural elegance, they eliminate all the common headaches associated with legacy drywall and POP false ceilings. Whether you are building a new modern luxury residence or upgrading an existing commercial space, incorporating high-quality stretch membrane ceiling systems ensures a durable, stunning, and maintenance-free overhead canvas for decades to come.
+                        </p>
+                    </div>
+
+                    <!-- FAQ Section (Accordion) -->
+                    <div class="mt-16 pt-10 border-t border-white/10">
+                        <h2 class="text-3xl font-bold text-white mb-8">Frequently Asked Questions</h2>
+                        
+                        <div class="space-y-4" id="faq-accordion">
+                            
+                            <!-- FAQ 1 -->
+                            <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                                <button onclick="toggleFaq(1)" class="w-full p-6 text-left font-semibold text-white flex justify-between items-center hover:text-emerald-400 transition-colors">
+                                    <span>How long does a stretch ceiling typically last?</span>
+                                    <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 transition-transform duration-300"></i>
+                                </button>
+                                <div id="faq-ans-1" class="faq-answer px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+                                    Stretch ceilings are built for extreme durability. Premium PVC and fabric membranes typically last over 20 years without losing tension, fading, sagging, or yellowing, and most come backed by a 10-year manufacturer warranty.
+                                </div>
+                            </div>
+
+                            <!-- FAQ 2 -->
+                            <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                                <button onclick="toggleFaq(2)" class="w-full p-6 text-left font-semibold text-white flex justify-between items-center hover:text-emerald-400 transition-colors">
+                                    <span>Can standard LED lights and heavy chandeliers be installed on stretch ceilings?</span>
+                                    <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 transition-transform duration-300"></i>
+                                </button>
+                                <div id="faq-ans-2" class="faq-answer px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+                                    Yes! All types of light fixtures—including recessed LED downlights, magnetic track lights, smoke detectors, AC vents, and heavy chandeliers—can be installed seamlessly. Heavy fixtures are anchored directly to the concrete slab above using solid sub-structures.
+                                </div>
+                            </div>
+
+                            <!-- FAQ 3 -->
+                            <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                                <button onclick="toggleFaq(3)" class="w-full p-6 text-left font-semibold text-white flex justify-between items-center hover:text-emerald-400 transition-colors">
+                                    <span>What happens if there is a water leak from the floor above?</span>
+                                    <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 transition-transform duration-300"></i>
+                                </button>
+                                <div id="faq-ans-3" class="faq-answer px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+                                    Stretch ceilings are completely waterproof. In case of a leak, the membrane safely holds the water by expanding downward into a localized pouch. A technician can drain the water, dry the cavity, and restore the membrane to its original tight shape without damaging your room interior.
+                                </div>
+                            </div>
+
+                            <!-- FAQ 4 -->
+                            <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+                                <button onclick="toggleFaq(4)" class="w-full p-6 text-left font-semibold text-white flex justify-between items-center hover:text-emerald-400 transition-colors">
+                                    <span>Is the installation process noisy or messy?</span>
+                                    <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 transition-transform duration-300"></i>
+                                </button>
+                                <div id="faq-ans-4" class="faq-answer px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+                                    Not at all. Unlike drywall/POP ceiling installation which generates heavy dust and noise for weeks, stretch ceiling setup is clean, quiet, and dustless. Most standard rooms can be completed in less than one single day.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 5: PRIVATE CUSTOMER CONTACT FORM ================= -->
+        <section id="page-contact" class="page-section hidden">
+            <div class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-emerald-400 font-semibold tracking-wider text-xs uppercase block mb-2">Direct Service Inquiry</span>
+                    <h1 class="text-4xl font-extrabold text-white tracking-tight">Request Your Custom Ceiling Consultation</h1>
+                    <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                        Fill out the project details below. Our design engineering team will review your requirements and dispatch a custom estimate directly to your provided contact.
+                    </p>
+                </div>
+
+                <!-- Contact Form Card (NO Owner Contact Info Displayed As Per Privacy Mandate) -->
+                <div class="glass-card p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl relative">
+                    
+                    <!-- Confirmation Toast Notification (Hidden by default) -->
+                    <div id="contact-success" class="hidden mb-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-sm flex items-center gap-3">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-400 shrink-0"></i>
+                        <div>
+                            <p class="font-bold">Inquiry Submitted Successfully!</p>
+                            <p class="text-xs text-slate-300">Thank you for submitting your project specifications. Our ceiling design specialists will reach out shortly.</p>
+                        </div>
+                    </div>
+
+                    <form id="customer-inquiry-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
+                            <!-- Customer Name -->
+                            <div>
+                                <label for="cust-name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name *</label>
+                                <input type="text" id="cust-name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all text-sm">
+                            </div>
+
+                            <!-- Customer Email -->
+                            <div>
+                                <label for="cust-email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address *</label>
+                                <input type="email" id="cust-email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Customer Phone -->
+                            <div>
+                                <label for="cust-phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone Number *</label>
+                                <input type="tel" id="cust-phone" required placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all text-sm">
+                            </div>
+
+                            <!-- Service Type Select -->
+                            <div>
+                                <label for="service-type" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Required Ceiling Finish *</label>
+                                <select id="service-type" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all text-sm">
+                                    <option value="" disabled selected>Select Finish Type</option>
+                                    <option value="translucent">Translucent LED Backlit Ceiling</option>
+                                    <option value="gloss">High Gloss Mirror Finish</option>
+                                    <option value="matte">Matte Smooth Finish</option>
+                                    <option value="acoustic">Micro-Perforated Acoustic Ceiling</option>
+                                    <option value="custom">3D / Printed Graphic Ceiling</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Project Message -->
+                        <div>
+                            <label for="cust-message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Project Details & Room Dimensions *</label>
+                            <textarea id="cust-message" rows="5" required placeholder="Please share details about your space (e.g., residential living room approx 300 sq ft, modern LED backlight preferred)..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all text-sm resize-none"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-bold hover:from-emerald-400 hover:to-teal-400 transition-all duration-300 shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2">
+                            <span>Submit Project Specification</span>
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Glass Footer -->
+    <footer class="glass-nav border-t border-white/10 mt-20 z-10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-slate-950 font-bold">
+                        <i data-lucide="layers" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-sm font-bold text-white tracking-wide">Urban Ceiling Aesthetics</span>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-400">
+                    <a href="#home" class="hover:text-emerald-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-emerald-400 transition-colors">About</a>
+                    <a href="#blog" class="hover:text-emerald-400 transition-colors">Articles</a>
+                    <a href="#article" class="hover:text-emerald-400 transition-colors font-medium text-emerald-400">Featured Guide</a>
+                    <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+                </div>
+
+                <p class="text-xs text-slate-500">
+                    &copy; 2026 Urban Ceiling Aesthetics. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic: Hash Routing, Interactive finish demo, FAQ accordions & Form handler -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // -------------------------------------------------------------
+        // HASH-BASED SINGLE PAGE APPLICATION ROUTING
+        // -------------------------------------------------------------
+        const routes = {
+            '': 'home',
+            '#home': 'home',
+            '#about': 'about',
+            '#blog': 'blog',
+            '#article': 'article',
+            '#stretch-ceiling-in-bangalore': 'article',
+            '#contact': 'contact'
+        };
+
+        function navigate() {
+            const hash = window.location.hash || '';
+            const targetPage = routes[hash] || 'home';
+
+            // Hide all pages
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show selected page
+            const activePage = document.getElementById(`page-${targetPage}`);
+            if (activePage) {
+                activePage.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Update Nav link active states
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === hash || (hash === '' && href === '#home')) {
+                    if (href !== '#contact') {
+                        link.classList.add('text-emerald-400', 'bg-white/10');
+                    }
+                } else {
+                    if (href !== '#contact') {
+                        link.classList.remove('text-emerald-400', 'bg-white/10');
+                    }
+                }
+            });
+
+            // Close mobile menu on navigate
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        window.addEventListener('hashchange', navigate);
+        window.addEventListener('DOMContentLoaded', navigate);
+
+        // -------------------------------------------------------------
+        // MOBILE MENU TOGGLE
+        // -------------------------------------------------------------
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // -------------------------------------------------------------
+        // INTERACTIVE CEILING FINISH SELECTOR (About Page)
+        // -------------------------------------------------------------
+        function setFinish(type) {
+            const previewText = document.getElementById('preview-text');
+            const glowEffect = document.getElementById('glow-effect');
+            
+            // Reset button active styles
+            document.querySelectorAll('.finish-btn').forEach(btn => {
+                btn.classList.remove('border-emerald-400', 'text-emerald-400');
+                btn.classList.add('text-slate-300');
+            });
+
+            const activeBtn = document.getElementById(`btn-${type}`);
+            if(activeBtn) {
+                activeBtn.classList.add('border-emerald-400', 'text-emerald-400');
+                activeBtn.classList.remove('text-slate-300');
+            }
+
+            if (type === 'matte') {
+                previewText.innerText = "Matte Finish: Resembles smooth, flawless drywall with zero reflection or micro-cracks.";
+                glowEffect.style.backgroundColor = "rgba(16, 185, 129, 0)";
+            } else if (type === 'gloss') {
+                previewText.innerText = "High Gloss Finish: Ultra-reflective lacquer surface that reflects light and creates spatial depth in lower rooms.";
+                glowEffect.style.backgroundColor = "rgba(56, 189, 248, 0.15)";
+            } else if (type === 'translucent') {
+                previewText.innerText = "Translucent LED Backlit: Softly diffuses integrated backlighting to turn the ceiling into a seamless light source.";
+                glowEffect.style.backgroundColor = "rgba(16, 185, 129, 0.35)";
+            }
+        }
+
+        // -------------------------------------------------------------
+        // ARTICLE FAQ ACCORDION TOGGLE
+        // -------------------------------------------------------------
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faq-ans-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            const isOpen = ans.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-answer').forEach(el => el.classList.remove('open'));
+            document.querySelectorAll('#faq-accordion i').forEach(el => el.style.transform = 'rotate(0deg)');
+
+            // Toggle current
+            if (!isOpen) {
+                ans.classList.add('open');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // -------------------------------------------------------------
+        // PRIVATE CONTACT FORM SUBMIT HANDLER
+        // -------------------------------------------------------------
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const btn = document.getElementById('submit-btn');
+            const toast = document.getElementById('contact-success');
+
+            // Button loading simulation
+            btn.disabled = true;
+            btn.innerHTML = `<span>Processing Inquiry...</span> <i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i>`;
+            lucide.createIcons();
+
+            setTimeout(() => {
+                // Show success toast
+                toast.classList.remove('hidden');
+                
+                // Reset form
+                document.getElementById('customer-inquiry-form').reset();
+                
+                // Restore button state
+                btn.disabled = false;
+                btn.innerHTML = `<span>Submit Project Specification</span> <i data-lucide="send" class="w-5 h-5"></i>`;
+                lucide.createIcons();
+
+                // Auto-scroll to toast
+                toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1200);
+        }
+    </script>
+</body>
+</html>
